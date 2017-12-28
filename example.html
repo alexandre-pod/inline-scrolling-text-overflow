@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+	<meta charset="utf-8">
+	<!-- Import style needed by the library  -->
+	<link rel="stylesheet" href="scrolling-text-lib.css">
+
+	<!-- Custom style for the example -->
+	<style>
+		body {
+			text-align: center;
+		}
+		.div_style {
+			border: 1px solid red;
+			width: 40%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- Creating examples -->
+	<p>Every elements inside the boxes are added to the library to make the text scroll if it does not fit</p>
+	<div class="div_style">
+		<span class="to_add_scroll">
+			short text
+		</span>
+	</div>
+
+	<p>Resize the window to make the text too long for the box</p>
+	<div class="div_style">
+		<span class="to_add_scroll">
+			long text that will scroll if it could not enter in the screen
+		</span>
+	</div>
+
+	<div style="width: 150px; margin: 0 auto; border: 1px solid red;">
+		<span class="to_add_scroll">
+			long text scrolling because it is too long
+		</span>
+	</div>
+
+	<!-- Import the library -->
+	<script src='scrolling-text-lib.js'></script>
+
+	<!-- Using the library -->
+	<script>
+	// Getting elements cointaining the text that you want to see scroll if it does not fit into the screen
+	var elms = document.querySelectorAll('.to_add_scroll');
+
+	for (var i = 0; i < elms.length; i++) {
+		ScrollingTextLib.add(elms[i]);
+	}
+	</script>
+</body>
+</html>

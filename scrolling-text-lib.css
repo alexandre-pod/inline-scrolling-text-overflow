@@ -1,0 +1,26 @@
+.stl-scrolling-text-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.stl-scrolling-text {
+  display: inline-block;
+  min-width: 100%;
+
+  animation: 5s linear 0s infinite stl-scrolling-text-animation;
+  -webkit-animation: 5s linear 0s infinite stl-scrolling-text-animation;
+}
+
+@keyframes stl-scrolling-text-animation {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  85% { transform: translateX(calc(-100% + var(--stl-container-size))); }
+  100% { transform: translateX(calc(-100% + var(--stl-container-size))); }
+}
+
+@-webkit-keyframes stl-scrolling-text-animation {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  85% { transform: translateX(calc(-100% + var(--stl-container-size))); }
+  100% { transform: translateX(calc(-100% + var(--stl-container-size))); }
+}
