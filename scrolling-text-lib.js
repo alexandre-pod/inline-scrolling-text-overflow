@@ -13,7 +13,7 @@ var ScrollingTextLib = {};
   var enabled = true;
 
   // listen resize event to update container size, add a delay of 1s before updating all wathced elements on resize
-  window.addEventListener('resize', _defer(_updateAll, 1000));
+  window.addEventListener('resize', _defer(_updateAll, 100));
 
   // Add class to the element, set the css variable coresponding to the width of the parent element needed for the animation
   // If the element was already added to the lib, it will be updated
